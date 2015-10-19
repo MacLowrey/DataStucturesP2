@@ -22,12 +22,12 @@ void randomArray(int* arr,int sizeOfArray)
 };
 
 void quicksort(int *arr, int left, int right){
-    int min = (left+right)/2;
+    //int min = (left+right)/2;
     cout<<"QS:"<<left<<","<<right<<"\n";
     
     int i = left;
     int j = right;
-    int pivot = arr[min];
+    int pivot = right;
     
     while(left<j || i<right)
     {
