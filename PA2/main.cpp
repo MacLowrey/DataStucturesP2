@@ -21,35 +21,6 @@ void randomArray(int* arr,int sizeOfArray)
 
 };
 
-void quicksort(int *arr, int left, int right){
-    //int min = (left+right)/2;
-    cout<<"QS:"<<left<<","<<right<<"\n";
-    
-    int i = left;
-    int j = right;
-    int pivot = right;
-    
-    while(left<j || i<right)
-    {
-        while(arr[i]<pivot)
-            i++;
-        while(arr[j]>pivot)
-            j--;
-        
-        if(i<=j){
-            swap(arr[i],arr[j]);
-            i++;
-            j--;
-        }
-        else{
-            if(left<j)
-                quicksort(arr, left, j);
-            if(i<right)
-                quicksort(arr,i,right);
-            return;
-        }
-    }
-}
 
 
 
@@ -58,6 +29,7 @@ int main(int argc, const char * argv[]) {
     srand(time(NULL));
     int size=100;
     int j[size];
+    
     randomArray(j, size);
     for(int i = 0 ;i<20;i++)
     cout<<endl;
@@ -66,14 +38,14 @@ int main(int argc, const char * argv[]) {
   // cout<<timelocal();
     //timelocal(timer);
     cout<<"time is:"<<time(&begin)<<endl;
-    quicksort(j, 0, 99);
+    quickSort(j, 0, 99);
     cout<<"time is:"<<time(&end)<<endl;
     
-/*    cout<<"SORTED"<<endl;
+   cout<<"SORTED"<<endl;
     for(int i = 0 ;i<100;i++)
     {
-        cout<<j[i]<<endl;
-    }*/
+        cout<<i<<": "<<j[i]<<endl;
+    }
     //Portion 2
     
     //Portion 3
