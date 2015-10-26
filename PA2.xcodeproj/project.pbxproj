@@ -26,8 +26,6 @@
 		FC7D7F081BCC6EB600473488 /* PA2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PA2; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7D7F0B1BCC6EB600473488 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FC7D7F121BCC700900473488 /* quick_sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = quick_sort.h; sourceTree = "<group>"; };
-		FC7D7F131BCC718600473488 /* insertion_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertion_sort.h; sourceTree = "<group>"; };
-		FC7D7F141BCC72CE00473488 /* merge_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merge_sort.h; sourceTree = "<group>"; };
 		FC8DD36B1BDD701D00201B36 /* rand_quick_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rand_quick_sort.h; sourceTree = "<group>"; };
 		FC930FCE1BD4A4720089C520 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +63,6 @@
 				FC7D7F0B1BCC6EB600473488 /* main.cpp */,
 				FC930FCE1BD4A4720089C520 /* util.h */,
 				FC7D7F121BCC700900473488 /* quick_sort.h */,
-				FC7D7F131BCC718600473488 /* insertion_sort.h */,
-				FC7D7F141BCC72CE00473488 /* merge_sort.h */,
 				FC8DD36B1BDD701D00201B36 /* rand_quick_sort.h */,
 			);
 			path = PA2;
