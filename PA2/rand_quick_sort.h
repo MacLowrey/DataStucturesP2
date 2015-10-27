@@ -11,11 +11,9 @@
 
 
 int random_partition(int* arr, int start, int end)
-{
-    srand(time(NULL));
-    int pivotIdx = start + rand() % (end-start+1);
+{   int pivotIdx = start + rand() % (end-start+1);
     int pivot = arr[pivotIdx];
-    swap(arr[pivotIdx], arr[end]); // move pivot element to the end
+    swap(&arr[pivotIdx], &arr[end]); // move pivot element to the end
     pivotIdx = end;
     int i = start -1;
     
@@ -24,11 +22,11 @@ int random_partition(int* arr, int start, int end)
         if(arr[j] <= pivot)
         {
             i = i+1;
-            swap(arr[i], arr[j]);
+            swap(&arr[i], &arr[j]);
         }
     }
     
-    swap(arr[i+1], arr[pivotIdx]);
+    swap(&arr[i+1], &arr[pivotIdx]);
     return i+1;
 }
 

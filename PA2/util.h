@@ -18,7 +18,7 @@ int randomGen(int bound)
     ret = rand() % bound;
     return ret;
 }
-void swap(int * a, int* b)
+void swap(int* a, int* b)
 {
     int holder = *a;
     *a = *b;
