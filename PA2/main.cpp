@@ -5,6 +5,7 @@
 #include <string>
 #include <algorithm>
 #include "rand_quick_sort.h"
+#include "merge_sort.h"
 #include "quick_sort.h"
 #include "util.h"
 
@@ -30,7 +31,7 @@ void randomArray(int* arr,int sizeOfArray)
     for(int i =0;i<sizeOfArray;i++)
     {
         arr[i] = randomGen(100);
-       //cout<<i<<": "<<arr[i]<<endl;
+      //cout<<i<<": "<<arr[i]<<endl;
     }
 
 
@@ -69,15 +70,18 @@ int main(int argc, const char * argv[]) {
     randomArray(j, elements);
     int k[elements];//array to be quicksorted
     int l[elements];//array to be randomly quicksorted
+    int m[elements];//array to be merge sorted
     for(int i=0;i<elements;i++)//copy the original random array
     {
         k[i]=j[i];
         l[i]=j[i];
+        m[i]=j[i];
     }
         if(partial)
         {
             partialSort(k, elements);
             partialSort(l, elements);
+            partialSort(m, elements);
         }
     
     //Portion 1 Quicksort
@@ -97,8 +101,17 @@ int main(int argc, const char * argv[]) {
     long long  durationQR = std::chrono::duration_cast<std::chrono::microseconds>( time4 - time3 ).count();
     //cout<<"QUICKSORTR! DEBUG"<<endl;
     //printArray(l,elements);
+ 
+    //Portion 3
+    std::chrono::high_resolution_clock::time_point time5 = std::chrono::high_resolution_clock::now();
+    mergeSort(m, 0, elements-1);
+    std::chrono::high_resolution_clock::time_point time6 = std::chrono::high_resolution_clock::now();
+    long long  durationM = std::chrono::duration_cast<std::chrono::microseconds>( time6 - time5 ).count();
+    //printArray(m,elements);
+    
+        cout<<durationQ<<" "<<durationQR<<" "<<durationM<<endl;
         
-        cout<<durationQ<<" "<<durationQR<<endl;
+    //cout<<durationM<<endl;
 
     }
     

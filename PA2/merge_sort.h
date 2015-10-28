@@ -15,13 +15,13 @@ void mergeArray(int array[], int left, int mid, int right)
     int n2 = right - mid;
     
     // create temp arrays
-    int lefty[n1], righty[n2];
+    int L[n1], R[n2];
     
     // Copy data to temp arrays lefty[ ] and righty[ ]
     for(i = 0; i < n1; i++)
-        lefty[i] = array[left + i];
+        L[i] = array[left + i];
     for(j = 0; j < n2; j++)
-        righty[j] = array[mid + 1 + j];
+        R[j] = array[mid + 1 + j];
     
     // Merge the temp arrays back into array[ ]
     i = 0;
@@ -29,14 +29,14 @@ void mergeArray(int array[], int left, int mid, int right)
     k = left;
     while (i < n1 && j < n2)
     {
-        if (lefty[i] <= righty[j])
+        if (L[i] <= R[j])
         {
-            array[k] = lefty[i];
+            array[k] = L[i];
             i++;
         }
         else
         {
-            array[k] = righty[j];
+            array[k] = R[j];
             j++;
         }
         k++;
@@ -45,7 +45,7 @@ void mergeArray(int array[], int left, int mid, int right)
     // Copy the remaining elements of lefty[ ], if there are any
     while (i < n1)
     {
-        array[k] = lefty[i];
+        array[k] = L[i];
         i++;
         k++;
     }
@@ -53,7 +53,7 @@ void mergeArray(int array[], int left, int mid, int right)
     // Copy the remaining elements of righty[ ], if there are any 
     while (j < n2)
     {
-        array[k] = righty[j];
+        array[k] = R[j];
         j++;
         k++;
     }

@@ -27,6 +27,7 @@
 		FC7D7F0B1BCC6EB600473488 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FC7D7F121BCC700900473488 /* quick_sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = quick_sort.h; sourceTree = "<group>"; };
 		FC8DD36B1BDD701D00201B36 /* rand_quick_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rand_quick_sort.h; sourceTree = "<group>"; };
+		FC8DD36C1BE156E400201B36 /* merge_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merge_sort.h; sourceTree = "<group>"; };
 		FC930FCE1BD4A4720089C520 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				FC7D7F0B1BCC6EB600473488 /* main.cpp */,
+				FC8DD36C1BE156E400201B36 /* merge_sort.h */,
 				FC930FCE1BD4A4720089C520 /* util.h */,
 				FC7D7F121BCC700900473488 /* quick_sort.h */,
 				FC8DD36B1BDD701D00201B36 /* rand_quick_sort.h */,
