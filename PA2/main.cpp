@@ -19,7 +19,15 @@ void randomArray(int* arr,int sizeOfArray)
     }
 
 
-};
+}
+void printArray (int arr[],int size)
+{
+    for(int j = 0; j<size;j++)
+    {
+        cout<<j<<": "<<arr[j]<<endl;
+    }
+}
+
 
 
 
@@ -29,7 +37,7 @@ int main(int argc, const char * argv[]) {
     int elements;
     cout<<"How many elements in the array?"<<endl;
     cin>>elements;
-    for(int apple = 0;apple<1000;apple++){
+    //for(int apple = 0;apple<1000;apple++){
     int j[elements];
     randomArray(j, elements);
     int k[elements];//array to be quicksorted
@@ -40,7 +48,7 @@ int main(int argc, const char * argv[]) {
         l[i]=j[i];
     }
       //  cout<<endl<<"--------------------------------------------"<<endl;
-    
+  /*
     //Portion 1 Quicksort
     std::chrono::high_resolution_clock::time_point time1 = std::chrono::high_resolution_clock::now();
     quickSort(k, 0, elements-1);
@@ -59,10 +67,13 @@ int main(int argc, const char * argv[]) {
     cout<<durationQ<<" "<<durationI<<endl;
     //for(int i = 0 ;i<elements;i++){cout<<i<<": "<<l[i]<<endl;}//PRINT STATEMENT DEBUG
     }
+    */
+        insertionSort(k,elements);
+        printArray(k,elements);
     
 }
 
-
+//}
 
 
 
